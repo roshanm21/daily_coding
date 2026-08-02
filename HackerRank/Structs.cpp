@@ -7,10 +7,16 @@ using namespace std;
 
 int main()
 {
-    
-    
+    struct Student
+    {
+        string first_name;
+        int age;
+        string last_name;
+        int standard;
+    };
+    Student st;
+    cin >> st.age >> st.first_name >> st.last_name >> st.standard;
+    cout << st.age << " " << st.first_name << " " << st.last_name << " " << st.standard;
 
-
-    
     return 0;
 }
