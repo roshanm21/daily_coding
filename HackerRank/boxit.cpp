@@ -27,9 +27,9 @@ using namespace std;
 #include <iostream>
 class Box {
     private:
-    int l;
-    int b;
-    int h;
+    int l{};
+    int b{};
+    int h{};
     
     public:
     int getLength(){
@@ -38,18 +38,29 @@ class Box {
     int getBreadth() {
         return b;
     };
-    int getHeigth() {
+    int getHeight() {
         return h;
     };
     long long CalculateVolume(){
-        return l*b*h;
+        return (long long) l*b*h;
     };
 
-    Box(int l,int b,int h){};
-    Box(){};
+    Box(int vall,int valb,int valh){
+        vall = l;
+        valb = b;
+        valh = h;
+    };
+    Box() : l(0), b(0), h(0) {} // Member initializer list constructor used here
+
+
+    friend ostream& operator<<(ostream& out , const Box& B){
+        out << B.l << " " << B.b << " " << B.h;
+        return out;
+    }
+    bool operator<(const Box& B){
+        return (l < B.l) || (b < B.b && l == B.l) || (h < B.h && l == B.l && b == B.b) || false; // return false when equal (gives direct true false and is better than writing big if else nested)
+    };
 };
-
-
 
 //--------Mycode--------->
 
