@@ -6,6 +6,33 @@
 #include <cassert>
 using namespace std;
 
+class Student
+{
+private:
+    vector<int> scores{};
+
+public:
+    int input()
+    {
+        int currentscore{};
+        for (int i = 0; i < 5; i++)
+        {
+            cin >> currentscore;
+            scores.push_back(currentscore);
+        }
+        return 0;
+    };
+    int calculateTotalScore()
+    {
+        int totalscore{};
+        for (int j : scores)
+        {
+            totalscore += j;
+        }
+        return totalscore;
+    }
+};
+
 /// Hackerrank hidden code///
 int main()
 {
