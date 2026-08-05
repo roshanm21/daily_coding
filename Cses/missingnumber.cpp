@@ -1,16 +1,22 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
     int size = 0;
     cin>>size;
-    int l[] = {};
-    for(int j;size>0;j++){
+    int actsum{};
+    for(int j = 0;(size - 1 )>j;j++){
         int temp = 0;
         cin>>temp;
-        l[j] = temp;
+        actsum += temp;
+    }
+    int apprsum{0};
+    for (int k = 0; size >= k; k++){
+        apprsum+=k;
         
     }
+    cout<<(apprsum - actsum );
     return 0;
 }
