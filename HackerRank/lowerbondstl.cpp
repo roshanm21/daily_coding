@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int linersearch_lbstl() //This function contains the code with O(N) time complexity
+int main()
 {
     int len{1};
     cin >> len;
@@ -13,55 +13,44 @@ int linersearch_lbstl() //This function contains the code with O(N) time complex
         cin >> num;
         list.push_back(num);
     }
+
     int q{1};
     cin >> q;
-    bool ans = true;
+
     for (int j{}; j < q; j++)
     {
         int val{1};
         cin >> val;
-        int l{0};
-        int noval{0};
-        for (; val >= list[l]; l++)
+
+        // --- USING BINARY SEARCH --->
+        int low = 0;
+        int high = len - 1;
+        int targetIndex = len; 
+
+        while (low <= high)
         {
-            if (val == list[l])
+            int mid = low + (high - low) / 2;
+
+            if (list[mid] >= val)
             {
-                ans = true;
+                targetIndex = mid;
+                high = mid - 1;
             }
             else
             {
-                ans = false;
-                noval++;
-            }
-            if (ans)
-            {
-                break;
+                low = mid + 1; //check other half
             }
         }
-        if (ans)
+
+        if (targetIndex < len && list[targetIndex] == val)
         {
-            cout << "Yes " << (l + 1) << endl;
+            cout << "Yes " << (targetIndex + 1) << "\n";
         }
         else
         {
-            cout << "No " << noval + 1 << endl;
+            cout << "No " << (targetIndex + 1) << "\n";
         }
     }
-
-    return 0;
-}
-int main(){
-    int n{};
-    cout<<"No. of items : ";
-    cin>>n;
-    vector<int> list = {};
-    for(int count{};count<=n;count++){
-        int num{};
-        cin>>num;
-        list.push_back(num);
-    }
-    int mid = n/2;
-
 
     return 0;
 }
