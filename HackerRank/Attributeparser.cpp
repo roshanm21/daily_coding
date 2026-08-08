@@ -1,17 +1,14 @@
 //medium difficulty ,will do soon
 
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
-
-// 4 3
-// <tag1 value = "HelloWorld">
-// <tag2 name = "Name1">
-// </tag2>
-// </tag1>
-// tag1.tag2~name
-// tag1~name
-// tag1~value
 
 int main()
 {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
 }
