@@ -9,23 +9,24 @@ int main()
 {
     vector<string> mainstack = {};
     vector<string> dstack = {};
-    int num{};
+    int num{}; string curr;
     cin>>num;
+   
     for(int i{0} ; i<num ; i++){
-        string curr;
         cin>>curr;
-             
-        auto it = find(mainstack.begin(), mainstack.end(), curr);
-        if(it == mainstack.end()){
-            dstack.push_back(curr);
-        }else {
-            mainstack.push_back(curr);
-        }
+        mainstack.push_back(curr);
     };
+ 
     int q{};
     cin>>q;
-    for(string j : dstack){
-        cout<<j;
+    for(string j : mainstack){
+        cout<<j;   
+    auto it = find(dstack.begin(), dstack.end(), curr);
+    if (it == mainstack.end())
+    {
+        dstack.push_back(curr);
+    }
     };
+    cout<<dstack[q];
     return 0;
 }
