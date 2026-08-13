@@ -14,11 +14,21 @@
 using namespace std;
 
 int main(){
-    int size{0};
+    long long size{0};
     cin>>size;
+    long long moves{0};
+    vector<int> save = {};
     for(int j; j<size;j++){
-        int num{0};
+        long long num{0};
         cin>>num;
+        save.push_back(num);
+        if (j > 0 && save[j - 1] > save[j])
+        {
+            moves += (save[j - 1] - save[j]);
+            save[j] = save[j - 1];
+        }
     }
+    cout<<moves;
+
     
 }
