@@ -1,23 +1,27 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    string word;
-    cin>>word;
-    if(word.length()>10){
-        cout << word[0] << word.length() - 2<< word.back();
-    }else{
-        bool istrue = false;
-        for (int i = 0;i<word.length();i++){
-            if (iswalpha(word[i]))
-            {
-                istrue = true;
-            }
+    int times;
+    vector<string> namelist = {};
+    cin>>times;
+    for(int j=0; j<times; j++){
+        string word;
+        cin>>word; 
+        namelist.push_back(word);
+    };
+    for(string letter : namelist){
+        if (letter.size()>10){
+            cout << letter[0] << (letter.size() - 2) << letter[letter.size()-1] << endl;
+        }else{
+            cout<<letter<<endl;
         }
-            if(istrue){
-                cout << word;
-            }
+            
     }
+    
+
     return 0;
 }
