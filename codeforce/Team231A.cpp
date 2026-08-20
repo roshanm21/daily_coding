@@ -13,11 +13,11 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        int petya, vasya, tonya;
-        cin >> petya >> vasya >> tonya;
+        int p, v, t;
+        cin >> p >> v >> t;
 
         // If at least 2 are sure about the solution
-        if (petya + vasya + tonya >= 2)
+        if (p + v + t >= 2)
         {
             solved_count++;
         }
