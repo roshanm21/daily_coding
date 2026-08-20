@@ -18,10 +18,6 @@ int main()
     else if (dat == "--X" || dat == "X--")
     {
         num -= 1;;
-    }
-    else
-    {
-    }
-    }
+    }}
     cout<<num;
 }
