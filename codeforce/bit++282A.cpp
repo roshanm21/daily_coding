@@ -6,16 +6,16 @@ using namespace std;
 int main()
 {   
     int num =0;
-    int j;
-    cin>>j;
-    string dat;
+    int repeat;
+    cin>>repeat;
+    string bit;
    
-    for(int k=0 ; k<j ;k++){
-    cin>>dat;
-    if (dat == "++X" || dat == "X++"){
+    for(int k=0 ; k<repeat ;k++){
+    cin>>bit;
+    if (bit == "++X" || bit == "X++"){
             num += 1;
     }
-    else if (dat == "--X" || dat == "X--")
+    else if (bit == "--X" || bit == "X--")
     {
         num -= 1;;
     }}
