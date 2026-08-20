@@ -16,7 +16,6 @@ int main()
         int p, v, t;
         cin >> p >> v >> t;
 
-        // If at least 2 are sure about the solution
         if (p + v + t >= 2)
         {
             solved_count++;
