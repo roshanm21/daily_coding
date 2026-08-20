@@ -15,7 +15,6 @@ int main()
     {
         int p, v, t;
         cin >> p >> v >> t;
-
         if (p + v + t >= 2)
         {
             solved_count++;
