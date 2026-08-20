@@ -1,25 +1,29 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+
 using namespace std;
 
-int main(){
+int main()
+{
 
-    int q{};
-    if(!(cin>>q)) return 0;
-    int doin = 0;
-    int store[3] = {};
-    for(int j{}; j<q ; j++){
-        for(int k = 1; k<4; k++){
-            int lg{};
-            cout<<"inputinner"<<k<<endl;
-            cin>>lg;
-            store[k-1] = lg;
-            if((k-1) == 1 && store[k-2] == 1){
-                doin++;
-            }
-        }
-        }
+    int n;
+    if (!(cin >> n))
+        return 0;
 
-    cout<<doin;
+    int solved_count = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        int petya, vasya, tonya;
+        cin >> petya >> vasya >> tonya;
+
+        // If at least 2 are sure about the solution
+        if (petya + vasya + tonya >= 2)
+        {
+            solved_count++;
+        }
+    }
+
+    cout << solved_count << "\n";
+
+    return 0;
 }
