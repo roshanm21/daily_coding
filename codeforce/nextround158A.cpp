@@ -16,7 +16,7 @@ int main()
 
     if(nsort[p+1] >= nsort[p+2] && nsort[p+1]*nsort[p+2] != 0){
         if(nsort[p] == nsort[ap-1]){
-            cout << ap + 1;
+            cout << ap;
         }
         else
         {
