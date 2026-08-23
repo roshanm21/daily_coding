@@ -1,3 +1,6 @@
+// CODE FORCE QUESTIONS
+// Question Linke :- https://codeforces.com/problemset/problem/236/A
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -16,11 +19,10 @@ int main(){
         }else{
             dist.push_back(k);
         }
-        cout << dist.size();
     }
     if((dist.size()%2)==0){
         cout<<"CHAT WITH HER!";
     }else {
-        cout<< "IGNORE HIM !";
+        cout<< "IGNORE HIM!";
     }
 }
