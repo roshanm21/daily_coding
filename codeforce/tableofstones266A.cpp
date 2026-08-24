@@ -8,7 +8,7 @@ using namespace std;
 int main(){
 int stones{};
 vector<char> seq = {};
-char color;
+char color; 
 int count{};
 cin>>stones;
 for(int k{0} ; stones>k ;k++){
