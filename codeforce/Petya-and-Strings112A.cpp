@@ -11,7 +11,7 @@ int main()
     cin>> first >> second;
     for(char k : second){
         if((int)k > 91){
-            
+            //
         }
     }
 }
