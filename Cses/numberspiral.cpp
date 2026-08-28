@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int main()
+int first5rowmanual()
 {
 
     vector<vector<int>> rowbox = {
@@ -22,4 +22,8 @@ int main()
         cout<<rowbox[uy-1][ux-1] <<endl;
     }
     
+}
+
+int main(){
+
 }
