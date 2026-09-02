@@ -27,3 +27,4 @@ int main()
     }}
 
 }
+//listnode solution uploaded in leetcode
