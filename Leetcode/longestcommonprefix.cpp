@@ -10,9 +10,8 @@ public:
         char cur = ' ';
         for (string k : strs){
             
-            if(cur = k[0]){
+            
 
-            }
         }
     }
 };
