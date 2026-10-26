@@ -8,15 +8,12 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int k = 0;
-        vector<int> expected = {};
-        for(int i = 0;i<nums.size();i++){
-            if(nums[i] == nums[i+1]){
+        int k = 1;
+        for(int i = 1;i<nums.size();i++){
+            if(nums[i] != nums[k-1]){
+                nums[k] = nums[i];
                 k+=1;
-            }else{
-                expected.push_back(nums[i]);
             }
-
         }
     return k;
 }
@@ -24,7 +21,7 @@ public:
 };
 
 int main(){
-    vector<int> inpnum = {0,0,0,1,1,1,2,2};
+    vector<int> inpnum = {0,0,1,1,1,2,2,3,3,4};
     Solution test = Solution();
     cout<<test.removeDuplicates(inpnum);
 }
