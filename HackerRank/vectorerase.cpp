@@ -19,14 +19,12 @@ int main() {
         v.push_back(n);
     }
     cin>>IndexToRemove;
+    v.erase(v.begin()+IndexToRemove-1);
     cin>>RangeS>>RangeE;
-    for(;RangeE>RangeS;RangeS++){
-        v.erase(v.begin()+RangeS);
-        cout<<'|'<<RangeS<<'|'<<RangeE <<endl;
-    }
-    
+    v.erase(v.begin()+RangeS-1,v.begin()+RangeE-1);
+    cout<<v.size()<<endl;
     for(int k : v){
-        cout<<k;
+        cout<<k <<' ';
     }
     return 0;
 }
