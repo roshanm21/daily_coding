@@ -19,7 +19,7 @@ public:
                 store.push_back(k);
                  cout<<count;
                 ++count;
-            }
+            } 
         };
         cout<<count;
     return 0;
