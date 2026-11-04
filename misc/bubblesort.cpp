@@ -3,17 +3,16 @@
 using namespace std;
 
 int main(){
-    vector<int> rawdata = {5,6,8,4,2,3,1};
-    int s = rawdata.size();
+    vector<int> arr = {5,6,8,4,2,3,1};
+    int s = arr.size();
     int c{};
-    
-    for(int n = 0 ;s > n;n++){
-        if(rawdata[n]>rawdata[n+1]){
-  
-            cout<<rawdata[n] <<' ' <<rawdata[n+1] << ' '<< n <<endl ;
+        int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        // Inner loop handles the comparisons, ignoring already sorted elements
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
         }
     }
-    // for(int k : rawdata){
-       
-    // }
 };
