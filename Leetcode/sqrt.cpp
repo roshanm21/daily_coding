@@ -6,19 +6,16 @@ using namespace std;
 
 class Solution {
 public:
-    int mySqrt(int x) {
-        int guess = x;
-        while(true){  
-        int newguess = 1/2*(guess+x/guess);
-        
-        return newguess;
-        guess = newguess;
+     int mySqrt(int x) {
+        long long guess = x;
+        for(;guess*guess>x;){
+            guess = (guess+(x/guess))/2;
         }
-        
+        return guess;
     }
 };
 
 int main(){
     Solution test = Solution();
-    test.mySqrt(25);
+    cout<<test.mySqrt(3);
 }
