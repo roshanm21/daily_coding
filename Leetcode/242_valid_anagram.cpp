@@ -7,19 +7,20 @@ using namespace std;
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        bool flag = false;
-        for(char k : s){
-           if(t.find(k)){
-                flag = true;
-           }
+        sort(s.begin(),s.end());
+        sort(t.begin(),t.end());
+    if(s==t){
+            return true;
+        }else{
+            return false;
         }
-    return flag;
+
     }
 };
 
 int main(){
-    string S1 = "carrahce";
-    string S2 = "racedar";
+    string S1 = "carrace";
+    string S2 = "racecar";
     Solution testing = Solution();
     cout<<testing.isAnagram(S1,S2);
 }
